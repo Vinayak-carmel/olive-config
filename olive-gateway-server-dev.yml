@@ -48,7 +48,7 @@ spring:
             - Path=/api/olive/**
           filters:
             - RemoveRequestHeader=Cookie
-            - RewritePath=/api/olive-foundation(?<segment>/?.*), $\{segment} 
+            - RewritePath=/api/olive(?<segment>/?.*), $\{segment} 
 
 
 #  security:
