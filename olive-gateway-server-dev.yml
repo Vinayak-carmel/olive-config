@@ -46,7 +46,7 @@ spring:
           uri: lb://olive-foundation-server
           predicates:
             - Path=/api/olive-foundation/**
-            - Method=GET
+            - Method=POST
             - Query=id
             - Header=Authorization, Bearer (.*)
           filters:
