@@ -46,7 +46,6 @@ spring:
           uri: lb://olive-foundation-server
           predicates:
             - Path=/api/olive-foundation/**
-            - Method=POST
           filters:
             - RemoveRequestHeader=Cookie
             - RewritePath=/api/olive-foundation(?<segment>/?.*), $\{segment} 
