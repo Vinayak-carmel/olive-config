@@ -6,10 +6,10 @@ spring:
     name: olive-gateway-server    
   cloud:
     gateway:
-#      discovery:
-#        locator:
-#          enabled: true
-#          lower-case-service-id: true
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
       routes:
         - id: do-login
           uri: lb://olive-auth-server
