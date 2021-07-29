@@ -51,7 +51,7 @@ spring:
             - Header=Authorization, Bearer (.*)
           filters:
             - RemoveRequestHeader=Cookie
-            - RewritePath=/api/login, /ui/login    
+            - RewritePath=/api(?<segment>/?.*), $\{segment} 
 
 
 #  security:
