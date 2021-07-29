@@ -31,7 +31,6 @@ spring:
             
             
         - id: foundation-get-org
-#          uri: 'http://localhost:7072'
           uri: lb://olive-foundation-server
           predicates:
             - Path=/api/org/**
