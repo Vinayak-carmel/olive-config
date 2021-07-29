@@ -47,8 +47,6 @@ spring:
           predicates:
             - Path=/api/olive-foundation/**
             - Method=POST
-            - Query=id
-            - Header=Authorization, Bearer (.*)
           filters:
             - RemoveRequestHeader=Cookie
             - RewritePath=/api/olive-foundation/(?<segment>/?.*), $\{segment} 
