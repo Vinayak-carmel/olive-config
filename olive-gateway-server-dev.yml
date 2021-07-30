@@ -42,7 +42,7 @@ spring:
             - RewritePath=/api(?<segment>/?.*), $\{segment}
             
             
-        - id: olive-foundation-service
+        - id: olive-foundation-resourse
           uri: lb://olive-foundation-server
           predicates:
             - Path=/api/olive/**
