@@ -42,15 +42,15 @@ spring:
             - RewritePath=/api(?<segment>/?.*), $\{segment}
             
             
-        - id: olive-foundation-resourse
+        - id: olive-foundation-server
           uri: lb://olive-foundation-server
           predicates:
-            - Path=/api/olive/**
+            - Path=/api/v1.0/olive/**
           filters:
             - RemoveRequestHeader=Cookie
             - RewritePath=/api/v1.0/olive(?<segment>/?.*), $\{segment} 
             
-        - id: olive-foundation-service
+        - id: olive-foundation-resourse
           uri: lb://olive-foundation-server
           predicates:
             - Path=/css/**, /js/**, /images/**
