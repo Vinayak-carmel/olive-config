@@ -53,7 +53,7 @@ spring:
         - id: olive-foundation-resourse
           uri: lb://olive-foundation-server
           predicates:
-            - Path=/css/**, /js/**, /images/**
+            - Path=/css/**,/js/**,/images/**
             - Method=GET
           filters:
             - RemoveRequestHeader=Cookie
