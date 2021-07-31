@@ -29,19 +29,6 @@ spring:
             - RemoveRequestHeader=Cookie
             - RewritePath=/api/v1.0/refreshToken, /oauth/token
             
-            
-        - id: foundation-get-org
-#          uri: 'http://localhost:7072'
-          uri: lb://olive-foundation-server
-          predicates:
-            - Path=/api/org/**
-            - Method=GET
-            - Query=id
-            - Header=Authorization, Bearer (.*)
-          filters:
-            - RemoveRequestHeader=Cookie
-            - RewritePath=/api(?<segment>/?.*), $\{segment}
-            
         - id: olive-foundation-service
           uri: lb://olive-foundation-server
           predicates:
