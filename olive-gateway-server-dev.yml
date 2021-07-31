@@ -6,10 +6,10 @@ spring:
     name: olive-gateway-server    
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
+#      discovery:
+#        locator:
+#          enabled: true
+#          lower-case-service-id: true
       routes:
         - id: do-login
           uri: lb://olive-auth-server
@@ -18,7 +18,7 @@ spring:
             - Method=POST
           filters:
             - RemoveRequestHeader=Cookie
-            - RewritePath=/api/v1.0/doLogin, /api/v1/olive-login
+            - RewritePath=/api/v1.0/doLogin, /oauth/token
             
         - id: refresh-token
           uri: lb://olive-auth-server
@@ -31,34 +31,17 @@ spring:
             
             
         - id: foundation-get-org
+#          uri: 'http://localhost:7072'
           uri: lb://olive-foundation-server
           predicates:
             - Path=/api/org/**
-            - Method=POST
+            - Method=GET
             - Query=id
             - Header=Authorization, Bearer (.*)
           filters:
             - RemoveRequestHeader=Cookie
             - RewritePath=/api(?<segment>/?.*), $\{segment}
-            
-            
-        - id: olive-foundation-server
-          uri: lb://olive-foundation-server
-          predicates:
-            - Path=/api/olive/**
-          filters:
-            - RemoveRequestHeader=Cookie
-            - RewritePath=/api/olive(?<segment>/?.*), $\{segment} 
-            
-        - id: olive-foundation-resourse
-          uri: lb://olive-foundation-server
-          predicates:
-            - Path=/css/**,/js/**,/images/**
-            - Method=GET
-          filters:
-            - RemoveRequestHeader=Cookie
-            - RewritePath=(?<segment>/?.*), $\{segment}     
-        
+
 
 #  security:
 #    oauth2:
@@ -66,12 +49,12 @@ spring:
 #        jwt:
 #          jwk-set-uri: "http://localhost:7071/.well-known/jwks.json"
           
-eureka:
- client:
-   region: default
-   registry-fetch-interval-seconds: 5
-   service-url:
-     defaultZone: http://localhost:7074/eureka/
+#eureka:
+#  client:
+#    region: default
+#    registry-fetch-interval-seconds: 5
+#    service-url:
+#      defaultZone: http://localhost:7074/eureka/
       
 logging:
 #  level:
