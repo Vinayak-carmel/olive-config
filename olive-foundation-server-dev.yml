@@ -49,3 +49,4 @@ carmel:
   client_id: "olive@carmelsolutions"
   grant_type: "password"
   authBaseURL: "http://localhost:7071"
+  profilePicUploadPath: /Users/ronaldphilip/Desktop/Vinayak/uploads
