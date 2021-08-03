@@ -49,5 +49,3 @@ carmel:
   client_id: "olive@carmelsolutions"
   grant_type: "password"
   authBaseURL: "http://localhost:7071"
-  auth-api: "http://localhost:7071/api/v1/olive-login"
-  profilePicUploadPath: /Users/ronaldphilip/Desktop/Vinayak/uploads
