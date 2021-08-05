@@ -11,11 +11,6 @@ server:
 spring:
   application:
     name: olive-foundation-server
-  resources:
-    static-locations: file://@project.basedir@/res/static/
-  thymeleaf:
-    prefix: file://@project.basedir@/res/templates/
-    cache: false
 
   security:
     oauth2:
