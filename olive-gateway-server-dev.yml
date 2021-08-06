@@ -46,7 +46,7 @@ spring:
             - RemoveRequestHeader=Cookie
             - RewritePath=/(?<segment>/?.*), /$\{segment} 
             
-            - id: crm-service
+        - id: crm-service
           uri: lb://crm-server
           predicates:
             - Path=/api/olive/**
