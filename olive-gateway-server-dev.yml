@@ -44,7 +44,24 @@ spring:
             - Method=GET
           filters:
             - RemoveRequestHeader=Cookie
-            - RewritePath=/(?<segment>/?.*), /$\{segment}    
+            - RewritePath=/(?<segment>/?.*), /$\{segment} 
+            
+            - id: crm-service
+          uri: lb://crm-server
+          predicates:
+            - Path=/api/olive/**
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/api/olive/(?<segment>/?.*), /$\{segment}
+
+        - id: crm-service-resource
+          uri: lb://crm-server
+          predicates:
+            - Path=/css/**,/js/**,/images/**
+            - Method=GET
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/(?<segment>/?.*), /$\{segment}     
 
 
 #  security:
