@@ -49,10 +49,10 @@ spring:
         - id: crm-service
           uri: lb://crm-server
           predicates:
-            - Path=/api/olive/**
+            - Path=/crm/**
           filters:
             - RemoveRequestHeader=Cookie
-            - RewritePath=/api/olive/(?<segment>/?.*), /$\{segment}
+            - RewritePath=/crm/(?<segment>/?.*), /$\{segment}
 
         - id: crm-service-resource
           uri: lb://crm-server
