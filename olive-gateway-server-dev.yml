@@ -57,11 +57,11 @@ spring:
         - id: crm-service-resource
           uri: lb://crm-server
           predicates:
-            - Path=/css/**,/js/**,/images/**
+            - Path=/crm/css/**,/crm/js/**,/crm/images/**
             - Method=GET
           filters:
             - RemoveRequestHeader=Cookie
-            - RewritePath=/(?<segment>/?.*), /$\{segment}     
+            - RewritePath=/crm/(?<segment>/?.*), /$\{segment}     
 
 
 #  security:
