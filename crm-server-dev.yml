@@ -36,3 +36,5 @@ spring:
 logging:
   file:
     name: ./logs/crm-server.log
+carmel:
+  web-app-name: "CRM"
