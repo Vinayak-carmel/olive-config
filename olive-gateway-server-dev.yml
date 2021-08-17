@@ -61,7 +61,15 @@ spring:
             - Method=GET
           filters:
             - RemoveRequestHeader=Cookie
-            - RewritePath=/crm/(?<segment>/?.*), /$\{segment}     
+            - RewritePath=/crm/(?<segment>/?.*), /$\{segment}
+            
+        - id: real-estate-service
+          uri: lb://real-estate-server
+          predicates:
+            - Path=/realEstate/**
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/realEstate/(?<segment>/?.*), /$\{segment}    
 
 
 #  security:
