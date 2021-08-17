@@ -32,3 +32,6 @@ spring:
 logging:
   file:
     name: ./logs/real-estate-server.log
+carmel:
+  web-app-name: "REAL-ESTATE"
+    
