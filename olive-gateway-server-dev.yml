@@ -74,7 +74,7 @@ spring:
         - id: crm-service-resource
           uri: lb://crm-server
           predicates:
-            - Path=/realEstate/realEstate/**,/realEstate/js/**,/realEstate/images/**
+            - Path=/realEstate/css/**,/realEstate/js/**,/realEstate/images/**
             - Method=GET
           filters:
             - RemoveRequestHeader=Cookie
