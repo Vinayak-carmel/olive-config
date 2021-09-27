@@ -52,6 +52,14 @@ spring:
             - RemoveRequestHeader=Cookie
             - RewritePath=/api/olive/1.0/kloudKichn/(?<segment>/?.*), /$\{segment}
 
+        - id: olive-guestjini-service
+          uri: lb://guestjini-server
+          predicates:
+            - Path=/api/olive/1.0/guestjini/**
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/api/olive/1.0/guestjini/(?<segment>/?.*), /$\{segment}
+
 
 #  security:
 #    oauth2:
