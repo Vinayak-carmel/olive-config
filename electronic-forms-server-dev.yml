@@ -36,3 +36,8 @@ spring:
 logging:
   file:
     name: ./logs/electronic-forms-server.log
+auth:
+  org-id: "c79ecc86-20b7-44b2-ab70-3db893e37725"
+  client-id: "olive@carmelsolutions"
+  grant-type: "password"
+  refresh-grant-token: "refresh_token"    
