@@ -2,6 +2,11 @@ server:
   port:  ${PORT:0}
 
 spring:
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 3MB
+      
   application:
     name: guestjini-server
 
