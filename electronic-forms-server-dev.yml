@@ -43,5 +43,5 @@ auth:
   grant-type: "password"
   refresh-grant-token: "refresh_token"
   
-eForm-dir:
+eform-dir:
   pdf-store: "/home/carmel/Desktop/eForms/"
