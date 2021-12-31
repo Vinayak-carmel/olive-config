@@ -42,6 +42,3 @@ auth:
   client-id: "olive@carmelsolutions"
   grant-type: "password"
   refresh-grant-token: "refresh_token"
-  
-eform:
-  pdf-store: "/home/carmel/Desktop/eForms/"
