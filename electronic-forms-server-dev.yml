@@ -6,7 +6,7 @@ spring:
     name: electronic-forms-server    
     
 eForm-dir:
-  pdf-store: /home/carmel/Desktop/eForms/
+  pdf-store: "/home/carmel/Desktop/eForms/"
 
   security:
     oauth2:
