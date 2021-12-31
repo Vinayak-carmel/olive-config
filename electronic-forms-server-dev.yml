@@ -5,7 +5,7 @@ spring:
   application:
     name: electronic-forms-server
   resources:
-    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:/home/carmel/Desktop/eForms/    
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:/home/carmel/Desktop/eForms/
 
   security:
     oauth2:
