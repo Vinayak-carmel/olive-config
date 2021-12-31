@@ -46,3 +46,5 @@ logging:
     rollingpolicy:
       clean-history-on-start: false
       max-file-size: 5MB
+eform:
+  pdf-store: "/home/carmel/Desktop/eForms/"
