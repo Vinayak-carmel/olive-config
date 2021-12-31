@@ -3,10 +3,7 @@ server:
 
 spring:
   application:
-    name: electronic-forms-server    
-    
-eForm-dir:
-  pdf-store: "/home/carmel/Desktop/eForms/"
+    name: electronic-forms-server 
 
   security:
     oauth2:
@@ -44,4 +41,7 @@ auth:
   org-id: "c79ecc86-20b7-44b2-ab70-3db893e37725"
   client-id: "olive@carmelsolutions"
   grant-type: "password"
-  refresh-grant-token: "refresh_token"    
+  refresh-grant-token: "refresh_token"
+  
+eForm-dir:
+  pdf-store: "/home/carmel/Desktop/eForms/"
