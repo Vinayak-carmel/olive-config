@@ -37,7 +37,7 @@ spring:
             - RewritePath=/api/olive/1.0/realEstate/(?<segment>/?.*), /$\{segment}
 
         - id: olive-crm-service
-          uri: lb://crm-server
+          uri: lb://icrm-server
           predicates:
             - Path=/api/olive/1.0/crm/**
           filters:
