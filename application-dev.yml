@@ -48,3 +48,5 @@ logging:
       max-file-size: 5MB
 eform:
   pdf-store: "/home/carmel/Desktop/eForms/"
+carmel:
+  temp-files-upload-path: "/home/carmel/Documents/uploads/temp_files/"
