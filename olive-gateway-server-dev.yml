@@ -75,6 +75,15 @@ spring:
           filters:
             - RemoveRequestHeader=Cookie
             - RewritePath=/api/olive/1.0/icrm/(?<segment>/?.*), /$\{segment}
+        
+        - id: olive-inventory
+          uri: lb://inventory-server
+          predicates:
+            - Path=/api/olive/1.0/inventory/**
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/api/olive/1.0/inventory/(?<segment>/?.*), /$\{segment}
+            
 #  security:
 #    oauth2:
 #      resourceserver:
