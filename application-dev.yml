@@ -51,6 +51,7 @@ logging:
       max-file-size: 5MB
 eform:
   pdf-store: "/home/carmel/Desktop/eForms/"
+  pdf-templates: "/home/carmel/Desktop/eForms/pdf-templates/"
 carmel:
   temp-files-upload-path: "/mnt/volume/apps/docker/uploads/"
  # temp-files-upload-path: "/home/carmel/Documents/uploads/temp_files/"
