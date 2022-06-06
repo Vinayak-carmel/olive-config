@@ -7,7 +7,7 @@ spring:
       max-file-size: 2MB
       max-request-size: 3MB
   application:
-    name: icrm-server
+    name: dev-app-server
 
   security:
     oauth2:
