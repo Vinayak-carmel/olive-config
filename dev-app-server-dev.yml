@@ -36,4 +36,4 @@ spring:
       
 logging:
   file:
-    name: ./logs/icrm-server.log
+    name: ./logs/dev-app-server.log
