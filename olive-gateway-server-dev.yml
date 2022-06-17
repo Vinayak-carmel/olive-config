@@ -91,11 +91,13 @@ spring:
 #          jwk-set-uri: "http://localhost:7071/.well-known/jwks.json"
           
 eureka:
-  client:
-    region: default
-    registry-fetch-interval-seconds: 5
-    service-url:
-      defaultZone: http://localhost:7074/eureka/
+#   client:
+#     region: default
+#     registry-fetch-interval-seconds: 5
+#     service-url:
+#       defaultZone: http://localhost:7074/eureka/
+    instance:
+          hostname: localhost
       
 #logging:
 #  level:
