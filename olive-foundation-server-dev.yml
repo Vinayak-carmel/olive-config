@@ -44,3 +44,11 @@ logging:
   file:
     name: ./logs/olive-foundation-server.log
     
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+
