@@ -31,7 +31,14 @@ spring:
     show-sql: true
     generate-ddl: true
     database: mysql
-    database-platform: org.hibernate.dialect.MySQL5Dialect    
+    database-platform: org.hibernate.dialect.MySQL5Dialect   
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+    hostname: localhost  
       
 logging:
   file:
