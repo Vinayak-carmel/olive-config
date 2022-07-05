@@ -83,7 +83,15 @@ spring:
           filters:
             - RemoveRequestHeader=Cookie
             - RewritePath=/api/olive/1.0/inventory/(?<segment>/?.*), /$\{segment}
-            
+        
+        - id: wealth-holding
+          uri: lb://wealthHolding-server
+          predicates:
+            - Path=/api/olive/1.0/wealthHolding/**
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/api/olive/1.0/wealthHolding/(?<segment>/?.*), /$\{segment}
+
 #  security:
 #    oauth2:
 #      resourceserver:
