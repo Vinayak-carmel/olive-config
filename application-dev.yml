@@ -54,5 +54,5 @@ eform:
   pdf-templates: "/home/carmel/eForms/pdf-templates/"
   
 carmel:
-  temp-files-upload-path: "E:/uploads/"
+  temp-files-upload-path: "F:\git\olive-server-core\olive-gateway-icrm\src\main\resources\static/uploads/"
   reports-template-path: "E:/reports-template/"
