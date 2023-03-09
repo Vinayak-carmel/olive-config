@@ -55,4 +55,5 @@ eform:
   
 carmel:
   temp-files-upload-path: "F:/git/olive-server-core/olive-gateway-icrm/src/main/resources/static/uploads/"
+  docs-path: "/uploads/
   reports-template-path: "E:/reports-template/"
