@@ -32,8 +32,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: amazon@carmelsolutions.net
-    password: P@ssw0rd
+    username: partnerus@assetmine.com
+    password: Amcpar@123
     properties:
       mail:
         smtp:
