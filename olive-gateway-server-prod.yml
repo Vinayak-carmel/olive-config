@@ -92,13 +92,13 @@ spring:
             - RemoveRequestHeader=Cookie
             - RewritePath=/api/olive/1.0/wealthHolding/(?<segment>/?.*), /$\{segment}
             
-        - id: rms
-          uri: lb://rms-server
+        - id: sm
+          uri: lb://sales-management-server
           predicates:
-            - Path=/api/olive/1.0/rms/**
+            - Path=/api/olive/1.0/sales-management/**
           filters:
             - RemoveRequestHeader=Cookie
-            - RewritePath=/api/olive/1.0/rms/(?<segment>/?.*), /$\{segment}    
+            - RewritePath=/api/olive/1.0/sales-management/(?<segment>/?.*), /$\{segment}    
 
 #  security:
 #    oauth2:
